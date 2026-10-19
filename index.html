@@ -27,6 +27,166 @@ footer{border-top:1px solid #30123d;padding:22px 0;color:#a89ab9;font-size:.85re
 .auth-overlay{position:fixed;inset:0;z-index:50;background:#05030bdc;backdrop-filter:blur(9px);display:none;align-items:center;justify-content:center;padding:18px}.auth-overlay.show{display:flex}.auth-card{width:min(440px,100%);background:linear-gradient(145deg,#170d22,#0c0912);border:1px solid #a100ff;border-radius:18px;padding:25px;box-shadow:0 0 55px #a100ff35;position:relative}.auth-card h2{margin:0 0 8px;color:#e879ff}.auth-card p{color:var(--muted);line-height:1.5;font-size:.9rem}.auth-card label{display:block;font-size:.85rem;color:#e9def8;margin:14px 0 6px}.auth-card input{width:100%;padding:13px;border-radius:9px;background:#09070e;color:white;border:1px solid #4b176b;outline:none}.auth-card input:focus{border-color:#d000ff;box-shadow:0 0 0 3px #a100ff22}.auth-submit{width:100%;margin-top:18px}.close-auth{position:absolute;right:14px;top:12px;background:transparent;border:0;color:#e9def8;font-size:1.5rem;cursor:pointer}.auth-note{font-size:.75rem!important;color:#9e91b0!important}.auth-message{margin-top:12px;color:#d9a6ff;font-size:.86rem;line-height:1.5}
 @media(max-width:1000px){nav{flex-wrap:wrap}.navlinks{order:3;width:100%;overflow-x:auto;justify-content:flex-start}.navbtn{margin-left:auto}.hero{grid-template-columns:1fr}.hero-side{margin:12px 0 0;max-width:650px}.sections{grid-template-columns:1fr}.features{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:620px){header{top:4px}.container{width:94%}nav{padding:13px}.navbtn{padding:10px;font-size:.8rem}.hero{padding:45px 2% 32px}.hero h1{letter-spacing:-1.5px}.subbrand{letter-spacing:6px}.ranks{grid-template-columns:repeat(3,1fr)}.staff{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}.stats{gap:6px}.stat{padding:12px 4px}.stat strong{font-size:1rem}.ipline{font-size:.85rem}}
+
+/* NEPUS MARKET */
+.market-panel{margin:16px 0 28px;padding:20px;border:1px solid #5a1d78;border-radius:15px;background:linear-gradient(145deg,#15101d,#0b0811);box-shadow:0 0 28px #a100ff12}
+.market-intro{color:var(--muted);line-height:1.65;margin:0 0 18px;max-width:760px}
+.market-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0}
+.market-filters{display:flex;gap:8px;flex-wrap:wrap}
+.market-filter{border:1px solid #4b176b;background:#100b18;color:#e9def8;border-radius:9px;padding:10px 14px;font-weight:800;cursor:pointer}
+.market-filter.active,.market-filter:hover{background:linear-gradient(110deg,#a100d9,#7025dc);border-color:#d66bff;color:white}
+.market-cart{padding:10px 14px;border:1px solid #7b2cff;border-radius:9px;background:#190d25;font-weight:800;color:#f7eaff}
+.market-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.market-card{display:flex;flex-direction:column;min-width:0;padding:17px;border:1px solid #382044;border-radius:13px;background:linear-gradient(150deg,#171020,#0e0a14);transition:transform .2s,border-color .2s,box-shadow .2s}
+.market-card:hover{transform:translateY(-3px);border-color:#a100ff;box-shadow:0 8px 24px #a100ff18}
+.market-card[hidden]{display:none!important}
+.market-art{height:94px;display:grid;place-items:center;font-size:3.25rem;text-shadow:0 0 22px #c000ff65;background:radial-gradient(ellipse at center,#5b187a44,transparent 68%);border-radius:10px;margin-bottom:12px}
+.market-type{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:#d879ff;font-weight:900}
+.market-card h3{margin:7px 0;font-size:1.04rem}
+.market-card p{margin:0 0 14px;color:var(--muted);font-size:.82rem;line-height:1.5;flex:1}
+.market-price{font-size:1.15rem;font-weight:950;color:#e8a7ff;margin:2px 0 13px}
+.market-buy{width:100%;padding:11px 12px;border:1px solid #e66cff;border-radius:9px;background:linear-gradient(110deg,#b000ff,#7b2cff);color:#fff;font-weight:900;cursor:pointer}
+.market-buy:hover{filter:brightness(1.12)}
+.market-footnote{font-size:.78rem;color:#9e91b0;line-height:1.55;margin:17px 0 0}
+.market-message{min-height:1.3em;margin-top:12px;color:#d9a6ff;font-size:.86rem}
+@media(max-width:900px){.market-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.market-grid{grid-template-columns:1fr}.market-card{padding:15px}.market-art{height:78px}}
+
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a class="logo" href="#home">✦ NEPUS <span>NETWORK</span></a>
+<div class="navlinks"><a class="active" href="#home">ANA SAYFA</a><a href="#boxpvp">BOXPVP</a><a href="#ranklar">RANKLAR</a><a href="#yetkililer">YETKİLİLER</a><a href="#market">MARKET</a><a href="#discord">DISCORD</a><a href="#kurallar">KURALLAR</a></div>
+<div class="account-actions"><button class="btn account-btn" onclick="openAuth('login')">GİRİŞ YAP</button><button class="btn primary account-btn" onclick="openAuth('register')">KAYDOL</button><a class="btn navbtn" href="https://discord.gg/GVyC5J5wW" target="_blank" rel="noopener">◉ DISCORD'A KATIL</a></div>
+</nav>
+</header>
+<main class="container" id="home">
+<section class="hero" id="boxpvp">
+<div class="hero-copy">
+<div class="eyebrow">MINECRAFT SUNUCUSU</div>
+<h1>NEPUS <span>NETWORK</span></h1>
+<div class="subbrand">BOXPVP</div>
+<p>Eşsiz BoxPvP deneyimi seni bekliyor! Güçlü ranklar, özel sistemler, aktif topluluk ve daha fazlası Nepus Network'te!</p>
+<div class="actions"><a class="btn primary" href="#sunucu">▶ HEMEN OYNA</a><a class="btn" href="https://discord.gg/GVyC5J5wW" target="_blank" rel="noopener">◉ DISCORD'A KATIL</a></div>
+</div>
+<div class="hero-side" id="sunucu">
+<div class="ipcard"><div class="small-label">SUNUCU IP</div><div class="ipline"><span id="serverip">napusnetwork.marthex.dev</span><button class="copy" onclick="copyIP()" aria-label="IP adresini kopyala">▢</button></div><div class="online"><strong>● Durum: kontrol edilmedi</strong><span>Java Edition</span></div></div>
+<div class="stats"><div class="stat"><strong>⚔️ BoxPvP</strong><span>Oyun Modu</span></div><div class="stat"><strong>👑 Ranklar</strong><span>Gelişim Sistemi</span></div><div class="stat"><strong>💜 7/24</strong><span>Topluluk</span></div></div>
+</div>
+</section>
+<div class="sections">
+<section class="panel" id="ranklar"><div class="panel-head"><h2>♛ RANKLAR</h2><a href="#market">Tüm Rankları Gör →</a></div><div class="ranks">
+<div class="rank"><div class="rank-icon">♛</div><b>VIP</b></div><div class="rank"><div class="rank-icon">♛</div><b>MVP</b></div><div class="rank"><div class="rank-icon">♛</div><b>MVP+</b></div><div class="rank"><div class="rank-icon">♛</div><b>ELITE</b></div><div class="rank"><div class="rank-icon">♛</div><b>LORD</b></div><div class="rank"><div class="rank-icon">♛</div><b>KING</b></div>
+</div></section>
+<section class="panel" id="yetkililer"><div class="panel-head"><h2>♢ YETKİLİLER</h2><a href="https://discord.gg/GVyC5J5wW" target="_blank" rel="noopener">Discord →</a></div><div class="staff">
+<div class="staff-card"><div class="avatar">👑</div><b class="owner">OWNER</b><small>cavalol</small></div><div class="staff-card"><div class="avatar">🟣</div><b class="admin">ADMIN</b><small>muhammed123tr</small></div><div class="staff-card"><div class="avatar">🛡️</div><b class="mod">MOD</b><small>secılmedı</small></div><div class="staff-card"><div class="avatar">💠</div><b class="helper">YARDIMCI</b><small>secılmedı</small></div>
+</div></section>
+</div>
+<section class="market-panel" id="market">
+<div class="panel-head"><h2>✦ NEPUS MARKET</h2><span class="market-cart" aria-live="polite">🛒 Sepet: <span id="marketCartCount">0</span></span></div>
+<p class="market-intro">Nepus Network ranklarını ve kasalarını keşfet. Fiyatlar Türk lirası (₺) cinsinden örnek fiyatlardır.</p>
+<div class="market-toolbar"><div class="market-filters" role="group" aria-label="Market kategorileri">
+<button class="market-filter active" type="button" data-filter="all" aria-pressed="true">Tümü</button>
+<button class="market-filter" type="button" data-filter="rank" aria-pressed="false">Ranklar</button>
+<button class="market-filter" type="button" data-filter="crate" aria-pressed="false">Kasalar</button>
+</div><button class="market-filter" type="button" id="clearMarketCart">Sepeti temizle</button></div>
+<div class="market-grid" id="marketGrid">
+<article class="market-card" data-category="rank" data-name="VIP" data-price="29.99"><div class="market-art" aria-hidden="true">♛</div><span class="market-type">Rank</span><h3>VIP</h3><p>VIP rank avantajları. İçerik ve yetkiler sunucu ayarlarına göre belirlenir.</p><div class="market-price">29,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+<article class="market-card" data-category="rank" data-name="VIP+" data-price="49.99"><div class="market-art" aria-hidden="true">✦</div><span class="market-type">Rank</span><h3>VIP+</h3><p>VIP+ rank avantajları. İçerik ve yetkiler sunucu ayarlarına göre belirlenir.</p><div class="market-price">49,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+<article class="market-card" data-category="rank" data-name="HVIP" data-price="69.99"><div class="market-art" aria-hidden="true">💠</div><span class="market-type">Rank</span><h3>HVIP</h3><p>HVIP rank avantajları. İçerik ve yetkiler sunucu ayarlarına göre belirlenir.</p><div class="market-price">69,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+<article class="market-card" data-category="rank" data-name="HVIP+" data-price="99.99"><div class="market-art" aria-hidden="true">💜</div><span class="market-type">Rank</span><h3>HVIP+</h3><p>HVIP+ rank avantajları. İçerik ve yetkiler sunucu ayarlarına göre belirlenir.</p><div class="market-price">99,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+<article class="market-card" data-category="rank" data-name="SPONSOR" data-price="149.99"><div class="market-art" aria-hidden="true">🏆</div><span class="market-type">Rank</span><h3>SPONSOR</h3><p>Sponsor rank avantajları. İçerik ve yetkiler sunucu ayarlarına göre belirlenir.</p><div class="market-price">149,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+<article class="market-card" data-category="crate" data-name="Günlük Kasası" data-price="19.99"><div class="market-art" aria-hidden="true">🟦</div><span class="market-type">Kasa</span><h3>Günlük Kasası</h3><p>Günlük ödüller için kasa.</p><div class="market-price">19,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+<article class="market-card" data-category="crate" data-name="Vote Kasası" data-price="29.99"><div class="market-art" aria-hidden="true">🟨</div><span class="market-type">Kasa</span><h3>Vote Kasası</h3><p>Oy verme ödülleri için kasa.</p><div class="market-price">29,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+<article class="market-card" data-category="crate" data-name="Event Kasası" data-price="39.99"><div class="market-art" aria-hidden="true">🟧</div><span class="market-type">Kasa</span><h3>Event Kasası</h3><p>Etkinlik ödülleri için kasa.</p><div class="market-price">39,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+<article class="market-card" data-category="crate" data-name="Para Kasası" data-price="49.99"><div class="market-art" aria-hidden="true">💰</div><span class="market-type">Kasa</span><h3>Para Kasası</h3><p>Sunucu ekonomisi için para ödülleri içeren kasa.</p><div class="market-price">49,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+<article class="market-card" data-category="crate" data-name="Kit Kasası" data-price="59.99"><div class="market-art" aria-hidden="true">🎁</div><span class="market-type">Kasa</span><h3>Kit Kasası</h3><p>Kit, zırh, silah veya özel eşya ödülleri için kasa.</p><div class="market-price">59,99₺</div><button class="market-buy" type="button">Listeye ekle</button></article>
+</div>
+<div class="market-message" id="marketMessage" aria-live="polite">Sepetin boş. İstediğin ürünleri seçebilirsin.</div>
+<p class="market-footnote">Gösterilen fiyatlar örnektir; satışa başlamadan önce kendi fiyatlarınla güncelle. Bu site şu anda ürün listesi/sepet taslağıdır; ödeme almaz ve Minecraft hesabına otomatik ürün teslim etmez.</p>
+</section>
+<section class="panel features-panel" id="ozellikler"><div class="panel-head"><h2>✦ SUNUCU ÖZELLİKLERİ</h2><a href="#discord">Topluluğa Katıl →</a></div><div class="features">
+<div class="feature"><div class="ico">⚔</div><div><b>BoxPvP</b><p>Eşsiz PvP deneyimi seni bekliyor!</p></div></div>
+<div class="feature"><div class="ico">⬡</div><div><b>Özel Sistemler</b><p>Birbirinden özel sistemlerle fark yarat!</p></div></div>
+<div class="feature"><div class="ico">▣</div><div><b>Market</b><p>Ranklar ve kasalar!</p></div></div>
+<div class="feature"><div class="ico">♟</div><div><b>Aktif Topluluk</b><p>Oyuncularla birlikte oyna.</p></div></div>
+<div class="feature"><div class="ico">⬟</div><div><b>Güvenli Oyun</b><p>Kurallara uygun, adil oyun.</p></div></div>
+<div class="feature"><div class="ico">▥</div><div><b>Performans</b><p>Akıcı oyun deneyimi.</p></div></div>
+</div></section>
+<section class="discord-banner" id="discord"><h2>💜 NEPUS NETWORK TOPLULUĞU</h2><p>Duyurulara katıl, etkinlikleri takip et ve diğer oyuncularla buluş. Nepus Network Discord sunucusuna gel!</p><a class="btn primary" href="https://discord.gg/GVyC5J5wW" target="_blank" rel="noopener">◉ DISCORD'A KATIL</a></section>
+<section class="panel" id="kurallar"><div class="panel-head"><h2>📜 SUNUCU KURALLARI</h2></div><p style="color:var(--muted);line-height:1.8;margin-bottom:0">Saygılı ol • Hile kullanma • Spam yapma • Yetkililerin yönlendirmelerine uy. Ayrıntılı kurallar için Discord sunucumuzu ziyaret et.</p></section>
+</main>
+<div class="auth-overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle" onclick="if(event.target===this)closeAuth()">
+<div class="auth-card"><button class="close-auth" onclick="closeAuth()" aria-label="Kapat">×</button><h2 id="authTitle">Nepus Network</h2><p id="authDescription">Hesabına giriş yap.</p>
+<form id="authForm" onsubmit="submitAuth(event)">
+<label for="authUsername">Kullanıcı adı</label><input id="authUsername" name="username" minlength="3" maxlength="24" autocomplete="username" required placeholder="Kullanıcı adın">
+<div id="emailField" style="display:none"><label for="authEmail">E-posta</label><input id="authEmail" name="email" type="email" autocomplete="email" placeholder="ornek@mail.com"></div>
+<label for="authPassword">Şifre</label><input id="authPassword" name="password" type="password" minlength="8" autocomplete="current-password" required placeholder="En az 8 karakter">
+<button class="btn primary auth-submit" id="authSubmit" type="submit">GİRİŞ YAP</button>
+<div class="auth-message" id="authMessage" aria-live="polite"></div>
+<p class="auth-note">Bu tasarımda giriş/kayıt ekranı örnek olarak hazırlanmıştır. Gerçek hesap açma ve giriş için güvenli bir sunucu veya kimlik doğrulama servisi bağlanmalıdır. Şifreni bu örnek sayfaya girerek gerçek hesap oluşturamazsın.</p>
+</form></div></div>
+<footer><div class="container foot"><span>© 2026 Nepus Network</span><span>Minecraft topluluk sitesi • Resmî Mojang/Microsoft sitesi değildir.</span></div></footer>
+<script>
+
+const marketCart=[];
+function renderMarketCart(){
+ const count=document.getElementById('marketCartCount');
+ const message=document.getElementById('marketMessage');
+ count.textContent=marketCart.length;
+ if(!marketCart.length){message.textContent='Sepetin boş. İstediğin ürünleri seçebilirsin.';return;}
+ message.textContent='Ürün listen: '+marketCart.map(item=>item.name+' ('+item.price.toLocaleString('tr-TR',{style:'currency',currency:'TRY'})+')').join(', ')+' | Toplam: '+marketCart.reduce((sum,item)=>sum+item.price,0).toLocaleString('tr-TR',{style:'currency',currency:'TRY'})+'. Örnek fiyatlardır.';
+}
+document.querySelectorAll('.market-filter[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('.market-filter[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
+ document.querySelectorAll('.market-card').forEach(card=>{card.hidden=button.dataset.filter!=='all'&&card.dataset.category!==button.dataset.filter;});
+}));
+document.querySelectorAll('.market-buy').forEach(button=>button.addEventListener('click',()=>{
+ const card=button.closest('.market-card');marketCart.push({name:card.dataset.name,price:Number(card.dataset.price)});renderMarketCart();
+ const old=button.textContent;button.textContent='Eklendi ✓';setTimeout(()=>button.textContent=old,900);
+}));
+document.getElementById('clearMarketCart').addEventListener('click',()=>{marketCart.length=0;renderMarketCart();});
+
+function copyIP(){const ip=document.getElementById('serverip').textContent;const button=document.querySelector('.copy');if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(ip).then(()=>{button.textContent='✓';setTimeout(()=>button.textContent='▢',1500)}).catch(()=>prompt('IP adresini kopyala:',ip))}else{prompt('IP adresini kopyala:',ip)}}
+let authMode='login';
+function openAuth(mode){authMode=mode;const register=mode==='register';document.getElementById('authOverlay').classList.add('show');document.getElementById('authTitle').textContent=register?'Hesap Oluştur':'Giriş Yap';document.getElementById('authDescription').textContent=register?'Nepus Network ailesine katıl.':'Nepus Network hesabına giriş yap.';document.getElementById('authSubmit').textContent=register?'KAYDOL':'GİRİŞ YAP';document.getElementById('emailField').style.display=register?'block':'none';document.getElementById('authEmail').required=register;document.getElementById('authPassword').autocomplete=register?'new-password':'current-password';document.getElementById('authMessage').textContent='';}
+function closeAuth(){document.getElementById('authOverlay').classList.remove('show')}
+function submitAuth(event){event.preventDefault();document.getElementById('authMessage').textContent='Ekran hazır! Gerçek giriş ve kayıt işlemleri için siteye güvenli bir backend/kimlik doğrulama servisi bağlanmalı.';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAuth()});
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0712">
+<title>Nepus Network | Minecraft BoxPvP</title>
+<style>
+:root{--bg:#09070e;--panel:#100d18;--purple:#b000ff;--purple2:#7b2cff;--pink:#e35bff;--text:#f7f1ff;--muted:#b8adc9;--line:#4b176b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 65% 15%,#301044 0,transparent 38%),radial-gradient(ellipse at 10% 30%,#1a0b2a 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.container{width:min(1480px,96%);margin:auto}
+header{position:sticky;top:12px;z-index:10;margin:12px auto 0;width:min(1480px,96%);border:1px solid #42135c;border-radius:17px;background:#0d0a14eF;backdrop-filter:blur(16px);box-shadow:0 0 28px #9700ff16}
+nav{display:flex;align-items:center;justify-content:space-between;padding:15px 24px;gap:20px}
+.logo{font-weight:1000;font-size:clamp(1.1rem,2vw,1.8rem);letter-spacing:1px;line-height:.9;text-shadow:0 0 18px #a100ff}.logo span{display:block;text-align:center;font-size:.55em;letter-spacing:5px;margin-top:7px;color:#d6c7e9}
+.navlinks{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2.1vw,34px);font-size:.86rem;font-weight:750}.navlinks a{padding:12px 8px;color:#e9def8}.navlinks a:hover{color:#e879ff}.navlinks .active{border:1px solid var(--purple);border-radius:9px;box-shadow:0 0 18px #a100ff28}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:10px;padding:14px 19px;border:1px solid var(--purple);font-weight:850;cursor:pointer;transition:.2s;color:white;background:#150c21}.btn:hover{transform:translateY(-2px);box-shadow:0 0 24px #a100ff55}.btn.primary{background:linear-gradient(110deg,#d000ff,#8c20ff);color:#11051b;border:1px solid #e66cff;box-shadow:0 0 22px #a000ff30}.navbtn{white-space:nowrap}
+.hero{min-height:445px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:28px;padding:64px 4% 48px;position:relative;overflow:hidden;border-bottom:1px solid #3c164d}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 45%,#7900b855,transparent 38%),linear-gradient(90deg,#09070e 5%,#09070eaa 50%,#09070e22);pointer-events:none}
+.hero-copy,.hero-side{position:relative;z-index:1}.eyebrow{font-size:.94rem;letter-spacing:2px;color:#d8cbe9}.hero h1{font-size:clamp(2.7rem,6.4vw,6.2rem);line-height:.9;letter-spacing:-3px;margin:12px 0 5px;font-weight:1000;text-transform:uppercase}.hero h1 span{color:#bd00ff;text-shadow:0 0 25px #a500ff77}.subbrand{font-size:clamp(1.2rem,2.5vw,2.1rem);letter-spacing:9px;font-weight:1000;color:#e6d8f6}.hero-copy p{max-width:540px;color:var(--muted);line-height:1.7;font-size:1.05rem}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:24px}
+.hero-side{display:flex;flex-direction:column;gap:12px;max-width:510px;width:100%;margin-left:auto}.ipcard,.stat,.panel,.feature{background:linear-gradient(135deg,#15101d,#0d0b13);border:1px solid #4a1a65;border-radius:13px;box-shadow:inset 0 0 20px #a000ff08}.ipcard{padding:16px}.small-label{color:#df6bff;font-weight:900;letter-spacing:1px;font-size:.9rem;margin-bottom:7px}.ipline{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;border:1px solid #a100ff;border-radius:9px;font-size:clamp(.9rem,2vw,1.2rem);font-weight:800;overflow-wrap:anywhere}.copy{background:transparent;border:0;color:#e879ff;font-size:1.4rem;cursor:pointer}.online{display:flex;justify-content:space-between;gap:10px;margin-top:12px;color:#d8cbe9}.online strong{color:#4df18b}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{text-align:center;padding:14px 8px}.stat strong{display:block;font-size:1.25rem}.stat span{font-size:.76rem;color:var(--muted)}
+.sections{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;padding:18px 0 0}.panel{padding:18px;border-color:#4a1763}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.panel h2{font-size:1.1rem;margin:0;letter-spacing:.5px}.panel-head a{font-size:.86rem;color:#e56cff;font-weight:800}.ranks,.staff,.features{display:grid;gap:12px}.ranks{grid-template-columns:repeat(6,1fr)}.staff{grid-template-columns:repeat(4,1fr)}.rank,.staff-card{border:1px solid #302439;border-radius:10px;background:#100d16;text-align:center;padding:15px 5px;min-width:0}.rank-icon{font-size:1.8rem;text-shadow:0 0 18px currentColor}.rank b{display:block;margin-top:7px;font-size:.86rem}.rank:nth-child(1){color:#c87cff}.rank:nth-child(2){color:#36dfff}.rank:nth-child(3){color:#ffc34e}.rank:nth-child(4){color:#ff5757}.rank:nth-child(5){color:#b36bff}.rank:nth-child(6){color:#48f0e6}
+.staff-card .avatar{width:44px;height:44px;margin:0 auto 8px;border-radius:10px;background:linear-gradient(135deg,#342044,#120d1a);display:grid;place-items:center;font-size:1.4rem;border:1px solid #51206a}.staff-card b{font-size:.8rem;display:inline-block;padding:4px 8px;border-radius:6px;background:#2b102e}.staff-card small{display:block;color:var(--muted);margin-top:7px}.owner{color:#ff7185}.admin{color:#bd84ff}.mod{color:#65aaff}.helper{color:#49eee0}
+.features-panel{margin:16px 0 28px}.features{grid-template-columns:repeat(6,1fr)}.feature{padding:17px 12px;display:flex;align-items:center;gap:10px;border-color:#302439}.feature .ico{font-size:1.6rem;color:#cf55ff;text-shadow:0 0 14px #a000ff}.feature b{font-size:.83rem}.feature p{font-size:.72rem;color:var(--muted);line-height:1.4;margin:6px 0 0}
+.discord-banner{margin:18px 0 30px;text-align:center;padding:32px 18px;border:1px solid #4c1a68;border-radius:15px;background:radial-gradient(ellipse at center,#39104e,#100b17 70%)}.discord-banner h2{margin:0 0 10px}.discord-banner p{color:var(--muted);margin:0 auto 20px;max-width:600px;line-height:1.6}
+footer{border-top:1px solid #30123d;padding:22px 0;color:#a89ab9;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+ .account-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.account-btn{padding:11px 13px;font-size:.78rem;white-space:nowrap}
+.auth-overlay{position:fixed;inset:0;z-index:50;background:#05030bdc;backdrop-filter:blur(9px);display:none;align-items:center;justify-content:center;padding:18px}.auth-overlay.show{display:flex}.auth-card{width:min(440px,100%);background:linear-gradient(145deg,#170d22,#0c0912);border:1px solid #a100ff;border-radius:18px;padding:25px;box-shadow:0 0 55px #a100ff35;position:relative}.auth-card h2{margin:0 0 8px;color:#e879ff}.auth-card p{color:var(--muted);line-height:1.5;font-size:.9rem}.auth-card label{display:block;font-size:.85rem;color:#e9def8;margin:14px 0 6px}.auth-card input{width:100%;padding:13px;border-radius:9px;background:#09070e;color:white;border:1px solid #4b176b;outline:none}.auth-card input:focus{border-color:#d000ff;box-shadow:0 0 0 3px #a100ff22}.auth-submit{width:100%;margin-top:18px}.close-auth{position:absolute;right:14px;top:12px;background:transparent;border:0;color:#e9def8;font-size:1.5rem;cursor:pointer}.auth-note{font-size:.75rem!important;color:#9e91b0!important}.auth-message{margin-top:12px;color:#d9a6ff;font-size:.86rem;line-height:1.5}
+@media(max-width:1000px){nav{flex-wrap:wrap}.navlinks{order:3;width:100%;overflow-x:auto;justify-content:flex-start}.navbtn{margin-left:auto}.hero{grid-template-columns:1fr}.hero-side{margin:12px 0 0;max-width:650px}.sections{grid-template-columns:1fr}.features{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){header{top:4px}.container{width:94%}nav{padding:13px}.navbtn{padding:10px;font-size:.8rem}.hero{padding:45px 2% 32px}.hero h1{letter-spacing:-1.5px}.subbrand{letter-spacing:6px}.ranks{grid-template-columns:repeat(3,1fr)}.staff{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}.stats{gap:6px}.stat{padding:12px 4px}.stat strong{font-size:1rem}.ipline{font-size:.85rem}}
 </style>
 </head>
 <body>
